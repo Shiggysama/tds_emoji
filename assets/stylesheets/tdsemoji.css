@@ -2,3 +2,39 @@ body img.emoji[title=":test:"]{
 	width:40px;
 	height:40px;
 }
+body img.emoji[title=":shady:"]{
+	width:31px;
+	height:18px;
+}
+body img.emoji[title=":aylaroll:"]{
+	width:24px;
+	height:18px;
+}
+body img.emoji[title=":voltarroll:"]{
+	width:32px;
+	height:18px;
+}
+body img.emoji[title=":chew:"]{
+	width:18px;
+	height:18px;
+}
+body img.emoji[title=":tear:"]{
+	width:21px;
+	height:18px;
+}
+body img.emoji[title=":table:"]{
+	width:35px;
+	height:18px;
+}
+body img.emoji[title=":facepalm:"]{
+	width:27px;
+	height:18px;
+}
+body img.emoji[title=":party:"]{
+	width:32px;
+	height:18px;
+}
+body img.emoji[title=":fist:"]{
+	width:56px;
+	height:19px;
+}
