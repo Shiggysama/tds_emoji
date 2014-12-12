@@ -3,4 +3,4 @@
 # version: 0.1
 # authors: Shinigami
 
-register_asset "javascripts/trout-emoji.js.erb", :server_side
+register_asset "javascripts/tds-emoji.js.erb", :server_side
