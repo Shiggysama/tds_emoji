@@ -5,13 +5,15 @@
  for(i = 0 ; i < paths.length ; i++){
 	var path = paths[i];
 	var code = path.split(".")[0];
+	console.log("Code: " + code + " - Path: /plugins/tds_emoji/images/" + path);
+	Discourse.Dialect.registerEmoji(code, '/plugins/tds_emoji/images/'+path);
 	TDSEmoji[code] = path;
  }
  console.log(paths.length + " paths detected");
- console.log(paths);
  console.log(TDSEmoji);
  console.log("Registering custom emojis");
  for(var key in TDSEmoji){
+    console.log(key);
 	if(paths.hasOwnProperty(key)){
 		console.log("Code: " + key + " - Path: /plugins/tds_emoji/images/" + TDSEmoji[key]);
 		Discourse.Dialect.registerEmoji(key, '/plugins/tds_emoji/images/'+TDSEmoji[key]);
