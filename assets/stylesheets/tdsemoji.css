@@ -38,3 +38,11 @@ body img.emoji[title=":fist:"]{
 	width:56px;
 	height:19px;
 }
+body img.emoji[title=":thumb:"]{
+	width:29px;
+	height:17px;
+}
+body img.emoji[title=":glasses:"]{
+	width:26px;
+	height:19px;
+}
