@@ -2,17 +2,10 @@
  var paths = <%= Dir.glob(File.expand_path("../../../public/images/*.*", __FILE__)).map{|f| File.basename(f)}.inspect %>;
  var i;
  var amount = 0;
- function imageFor(code){
-	var url = urlFor(code);
-	if(url){
-		return ['img', {href: url, title: ':' + code + ':', 'class': 'emoji custom', alt: code}];
-	}
- }
  console.log("Registering custom emojis");
  for(i = 0 ; i < paths.length ; i++){
 	var path = paths[i];
 	var code = path.split(".")[0];
-	console.log("Code: " + code + " - Path: /plugins/tds_emoji/images/" + path);
 	Discourse.Dialect.registerEmoji(code, '/plugins/tds_emoji/images/'+path);
 	amount++;
  }
