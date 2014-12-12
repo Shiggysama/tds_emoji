@@ -1,0 +1,18 @@
+(function() {
+ var paths = <%= Dir.glob(File.expand_path("../../../public/images/*.png", __FILE__)).map{|f| File.basename(f)}.inspect %>;
+ var TDSEmoji = [];
+ var i;
+ for(i = 0 ; i < paths.length ; i++){
+	var path = paths[i];
+	var code = path.split(".")[0];
+	TDSEmoji[code] = path;
+ }
+ console.log("Registering custom emojis");
+ for(var key in paths){
+	if(paths.hasOwnProperty(key)){
+		console.log("Code: " + key + " - Path: /plugins/tds_emoji/images/" + path[key]);
+		Discourse.Dialect.registerEmoji(key, '/plugins/tds_emoji/images/'+path[key]);
+	}
+ }
+ console.log("Done registering custom emojis");
+})();

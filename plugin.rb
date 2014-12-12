@@ -1,6 +1,6 @@
-# name: trout_emoji
-# about: adds an evil trout emoji
+# name: tds_emoji
+# about: adds custom emojis
 # version: 0.1
-# authors: Robin Ward
+# authors: Shinigami
 
-register_asset "javascripts/trout-emoji.js", :server_side
+register_asset "javascripts/trout-emoji.js.erb", :server_side
