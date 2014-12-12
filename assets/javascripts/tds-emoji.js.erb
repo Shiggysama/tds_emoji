@@ -7,6 +7,9 @@
 	var code = path.split(".")[0];
 	TDSEmoji[code] = path;
  }
+ console.log(paths.length + " paths detected");
+ console.log(paths);
+ console.log(TDSEmoji);
  console.log("Registering custom emojis");
  for(var key in TDSEmoji){
 	if(paths.hasOwnProperty(key)){
