@@ -4,15 +4,14 @@
  var i;
  for(i = 0 ; i < paths.length ; i++){
 	var path = paths[i];
-	console.log(path);
 	var code = path.split(".")[0];
 	TDSEmoji[code] = path;
  }
  console.log("Registering custom emojis");
- for(var key in paths){
+ for(var key in TDSEmoji){
 	if(paths.hasOwnProperty(key)){
-		console.log("Code: " + key + " - Path: /plugins/tds_emoji/images/" + path[key]);
-		Discourse.Dialect.registerEmoji(key, '/plugins/tds_emoji/images/'+path[key]);
+		console.log("Code: " + key + " - Path: /plugins/tds_emoji/images/" + TDSEmoji[key]);
+		Discourse.Dialect.registerEmoji(key, '/plugins/tds_emoji/images/'+TDSEmoji[key]);
 	}
  }
  console.log("Done registering custom emojis");
